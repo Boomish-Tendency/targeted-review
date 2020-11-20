@@ -4,4 +4,4 @@ VALUES
 ($1, $2, 5);
 -- (${content}, ${user_id}, 5)
 
-SELECT * FROM puns;
+SELECT * FROM puns ORDER BY pun_id;

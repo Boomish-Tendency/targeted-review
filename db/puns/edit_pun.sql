@@ -4,4 +4,4 @@ rating = 5
 WHERE
 pun_id = $1;
 
-SELECT * FROM puns;
+SELECT * FROM puns ORDER BY pun_id;
