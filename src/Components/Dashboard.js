@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import DashPun from "./DashPun";
+import { connect } from "react-redux";
 
 const Dashboard = (props) => {
   const [puns, setPuns] = useState([]);
@@ -40,9 +41,10 @@ const Dashboard = (props) => {
   return (
     <div>
       <div>Dashboard</div>
+      <p>{props.pokemon ? props.pokemon.name : null}</p>
       <ul style={{ listStyle: "none" }}>{mappedPuns}</ul>
     </div>
   );
 };
 
-export default Dashboard;
+export default connect((reduxState) => reduxState)(Dashboard);
